@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
+
+</head>
+<body>
+    <div class="main">
+    <div id="container"><button id="btn1"><</button>
+        <div id="slider">
+            <div class="slides"><img src="../slider/coursel/assets/ztbad1qj8vdjqe0p.jpg" alt=""></div>
+            <div class="slides"><img src="../slider/coursel/assets/photo-1549740425-5e9ed4d8cd34.jpeg" alt=""></div>
+            <div class="slides"><img src="../slider/coursel/assets/pexels-francesco-ungaro-1525041.jpg" alt=""></div>
+            <div class="slides"><img src="../slider/coursel/assets/pexels-christian-heitz-842711.jpg" alt=""></div>
+
+        </div>
+        <button id="btn2">></button>
+    </div>
+</div>
+</body>
+<script>
+    var slider=document.getElementById("slider");
+    var slides=document.querySelectorAll(".slides");
+    var slide_length=slides[0].clientWidth;
+    var slide_index=0;
+    slider.style.marginLeft=`-${slide_length * slide_index}px`;
+    document.getElementById('btn2').addEventListener("click",() =>{
+        slide_index++;
+        if(slide_index>=slides.length){
+            slide_index=0;
+        }
+        
+        slider.style.marginLeft=`-${slide_length * slide_index}px`;
+    })
+    document.getElementById('btn1').addEventListener("click",() =>{
+        slide_index--;
+        if(slide_index<0){
+            slide_index=slides.length-1;
+        }
+        
+        slider.style.marginLeft=`-${slide_length * slide_index}px`;
+    })
+</script>
+</html>
