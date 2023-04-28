@@ -1,0 +1,24 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
+  .swiper_slide{
+    height: 100%;
+    width: 100%;
+  }
+  img{
+    height: 100%;
+    width: 100%;
+  }
