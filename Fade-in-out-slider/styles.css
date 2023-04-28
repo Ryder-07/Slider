@@ -1,0 +1,98 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+section{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    background-color: aqua;
+    height: 70%;
+    width: 70%;
+    position: relative;
+
+}
+.slides{
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+img{
+    height: 100%;
+    width: 100%;
+    
+}
+.active{
+    display: block;
+}
+.signs{
+    position: absolute;
+    cursor: pointer;
+}
+#sign1{
+    height: 7vmin;
+    width: 5vmin;
+    border: none;
+    opacity: 0.6;
+    font-size: 4vmin;
+    color: white;
+    background-color: gray;
+    top: 50%;
+    left: 0;
+}
+#sign1:hover{
+    opacity: 0.8;
+}
+#sign2{
+    height: 7vmin;
+    width: 5vmin;
+    border: none;
+    opacity: 0.6;
+    font-size: 4vmin;
+    color: white;
+    background-color: gray;
+    top: 50%;
+    right: 0;
+}
+#sign2:hover{
+    opacity: 0.8;
+}
+#sign3{
+    padding: 5px;
+    opacity: 0.8;
+    background-color: gray;
+    color:aliceblue;
+}
+.fade{
+    animation: fade 0.7s ;
+    
+}
+@keyframes fade{
+    from{opacity:0.4;}
+    to{opacity: 1;}
+}
+.dot{
+    display: flex;
+    height: 40px;
+    width: 120px;
+    align-items: center;
+    justify-content: space-between;
+}
+.dots{
+    background-color: gray;
+    opacity: 0.6;
+    height: 20px;
+    width: 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.dots:hover{
+    opacity:1;
+}
